@@ -1,6 +1,6 @@
 class OffersController < ApplicationController
   def index
     opts = session[:api_data]
-    @client = Fyber::Client.new(opts)
+    @results = Fyber::Client.new(opts).search()
   end
 end
