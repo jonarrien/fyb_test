@@ -37,6 +37,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'haml-rails'
+gem 'simple_form'
 
 group :development, :test do
   gem 'spring'

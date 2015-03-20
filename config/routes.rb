@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
-  get 'offers/fill_data'
+
+  root 'api_data#fill_data'
+
+  get 'api_data/fill_data'
+  resources :api_data, only: [:create]
+
+  resources :offers, only: %w(index)
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'offers#fill_data'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
